@@ -8,11 +8,20 @@ import {
     useColorScheme,
     View,
   } from 'react-native';
+import ProfileCard from "./components/ProfileCard";
+import ProfileCardProps from "./components/ProfileCardProps";
+import ProfileCardObject from "./components/ProfileCardObject";
 
-  import ProfileCard from "./components/ProfileCard";
+const profileData = {
+  bannerImage: require('../assets/banner.jpg'),
+  profilePhoto: require('../assets/profilePhoto.jpeg'),
+  profileName: 'Johnny Bravo',
+  profileSubtitle: 'Whoa, mama!',
+  profileIntro: "Hey there, pretty mama! The name's Johnny Bravo!",
+};
 
-  const passedbannerImage = "../../assets/banner.jpg"
-  const passedprofilePhoto = "../../assets/profilePhoto.jpeg";
+  const passedbannerImage = require("../assets/banner.jpg");
+  const passedprofilePhoto = require("../assets/profilePhoto.jpeg");
   const passedprofileName = "Johnny Bravo";
   const passedprofileSubtitle = "Whoa, mama!";
   const passedprofileIntro = "Hey there, pretty mama! The name's Johnny Bravo.!!"
@@ -20,10 +29,20 @@ import {
 
   function Main() : React.JSX.Element {
     return (
+      <ScrollView>
             <View>
-              <ProfileCard bannerImage={passedbannerImage} profilePhoto={passedprofilePhoto} profileName={passedprofileName} profileSubtitle={passedprofileSubtitle} profileIntro={passedprofileIntro}/>
-            </View>
+              <ProfileCard/>
+              <ProfileCardProps
+                bannerImage={passedbannerImage}
+                profilePhoto={passedprofilePhoto}
+                profileName={passedprofileName}
+                profileSubtitle={passedprofileSubtitle}
+                profileIntro={passedprofileIntro}
+                />
+                <ProfileCardObject {...profileData}/>
 
+            </View>
+        </ScrollView>
     );
   }
 
