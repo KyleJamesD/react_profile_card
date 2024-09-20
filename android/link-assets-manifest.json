@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Pacifico.ttf",
+      "sha1": "baca1fca7fe74b61cb33aa0da48ec1a3a77bcf49"
+    },
+    {
+      "path": "assets/fonts/Teko.ttf",
+      "sha1": "7fd521101888c96d1ef85d94ac5b4ba5697b4067"
+    }
+  ]
+}
